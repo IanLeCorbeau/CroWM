@@ -1,7 +1,7 @@
 # Makefile for cwm
-# $Ragnarok: Makefile,v 1.8 2024/03/25 16:47:50 lecorbeau Exp $
+# $Ragnarok$
 
-CC=		clang
+CC=		cc
 
 PROG=		cwm
 
@@ -17,15 +17,12 @@ OBJS=		calmwm.o screen.o xmalloc.o client.o menu.o \
 		kbfunc.o strlcpy.o strlcat.o parse.o \
 		strtonum.o reallocarray.o
 		
-CPPFLAGS+=	-I${X11BASE}/include -I${X11BASE}/include/freetype2 \
-		-D_FORTIFY_SOURCE=2
+CPPFLAGS	+=	-I${X11BASE}/include -I${X11BASE}/include/freetype2
 
-CFLAGS?=	-Wall -O2 -D_GNU_SOURCE -flto=thin -Wformat -Wformat-security \
-		-fstack-clash-protection -fstack-protector-strong -fcf-protection
+CFLAGS		+=	-Wall -O2 -D_GNU_SOURCE
 
-LDFLAGS+=	-flto=thin -Wl,-O2 -Wl,-z,relro,-z,now -Wl,--as-needed -L${X11BASE}/lib \
-		-lXft -lfreetype -lX11-xcb -lX11 -lxcb -lXau -lXdmcp -lfontconfig -lexpat \
-		-lfreetype -lz -lXrandr -lXext
+LDFLAGS		+=	-L${X11BASE}/lib -lXft -lfreetype -lX11-xcb -lX11 -lxcb \
+			-lXau -lXdmcp -lfontconfig -lexpat -lfreetype -lz -lXrandr -lXext
 
 MANPREFIX?=	${PREFIX}/share/man
 
