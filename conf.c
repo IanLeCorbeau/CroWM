@@ -327,7 +327,7 @@ conf_init(struct conf *c)
 		else
 			home = "/";
 	}
-	xasprintf(&c->conf_file, "%s/%s", home, ".cwmrc");
+	xasprintf(&c->conf_file, "%s/%s", home, ".crowmrc");
 	xasprintf(&c->known_hosts, "%s/%s", home, ".ssh/known_hosts");
 }
 
