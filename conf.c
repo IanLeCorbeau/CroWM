@@ -30,7 +30,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "calmwm.h"
+#include "crowm.h"
 
 static const char	*conf_bind_mask(const char *, unsigned int *);
 static void		 conf_unbind_key(struct conf *, struct bind_ctx *);

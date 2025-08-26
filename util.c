@@ -30,7 +30,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "calmwm.h"
+#include "crowm.h"
 
 static void	 log_msg(const char *, va_list);
 

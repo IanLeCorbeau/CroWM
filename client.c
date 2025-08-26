@@ -29,7 +29,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "calmwm.h"
+#include "crowm.h"
 
 static void			 client_class_hint(struct client_ctx *);
 static void			 client_placement(struct client_ctx *);

@@ -30,7 +30,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "calmwm.h"
+#include "crowm.h"
 
 static struct geom screen_apply_gap(struct screen_ctx *, struct geom);
 static void screen_scan(struct screen_ctx *);

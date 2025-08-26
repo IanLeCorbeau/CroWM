@@ -30,7 +30,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "calmwm.h"
+#include "crowm.h"
 
 static struct group_ctx	*group_next(struct group_ctx *);
 static struct group_ctx	*group_prev(struct group_ctx *);

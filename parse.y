@@ -33,7 +33,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "calmwm.h"
+#include "crowm.h"
 
 #define YYSTYPE_IS_DECLARED
 

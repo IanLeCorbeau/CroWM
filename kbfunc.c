@@ -36,7 +36,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "calmwm.h"
+#include "crowm.h"
 
 #define HASH_MARKER	"|1|"
 

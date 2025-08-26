@@ -31,7 +31,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "calmwm.h"
+#include "crowm.h"
 
 void *
 xmalloc(size_t siz)

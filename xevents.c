@@ -35,7 +35,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "calmwm.h"
+#include "crowm.h"
 
 static void	 xev_handle_maprequest(XEvent *);
 static void	 xev_handle_unmapnotify(XEvent *);

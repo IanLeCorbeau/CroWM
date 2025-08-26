@@ -32,7 +32,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "calmwm.h"
+#include "crowm.h"
 
 #define PROMPT_SCHAR	"\xc2\xbb"
 #define PROMPT_ECHAR	"\xc2\xab"

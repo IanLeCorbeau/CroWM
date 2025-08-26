@@ -1,6 +1,6 @@
 # Edit to fit your distro
 
-PROG		= cwm
+PROG		= crowm
 VERSION		= 
 
 PREFIX		= /usr

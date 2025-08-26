@@ -15,14 +15,14 @@
 .\" OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 .\"
 .Dd $Mdocdate$
-.Dt CWMRC 5
+.Dt CROWMRC 5
 .Os
 .Sh NAME
-.Nm cwmrc
+.Nm crowmrc
 .Nd calm window manager configuration file
 .Sh DESCRIPTION
 This manual page describes the
-.Xr cwm 1
+.Xr crowm 1
 configuration file.
 .Pp
 The current line can be extended over multiple lines using a backslash
@@ -205,7 +205,7 @@ The default is 0.
 Toggle sticky group mode.
 The default behavior for new windows is to not assign any group.
 By enabling sticky group mode,
-.Xr cwm 1
+.Xr crowm 1
 will assign new windows to the currently selected group.
 .It Ic unbind-key Ar key
 Unbind function bound to
@@ -241,10 +241,10 @@ When selected, the window manager is replaced by
 .Bl -tag -width 23n -compact
 .It restart
 Restart the running
-.Xr cwm 1 .
+.Xr crowm 1 .
 .It quit
 Quit
-.Xr cwm 1 .
+.Xr crowm 1 .
 .It terminal
 Spawn a new terminal.
 .It lock
@@ -451,10 +451,10 @@ Move pointer 10 times
 pixels left.
 .El
 .Sh FILES
-.Bl -tag -width "~/.cwmrcXXX" -compact
-.It Pa ~/.cwmrc
+.Bl -tag -width "~/.crowmrcXXX" -compact
+.It Pa ~/.crowmrc
 Default
-.Xr cwm 1
+.Xr crowm 1
 configuration file.
 .El
 .Sh EXAMPLES
@@ -500,7 +500,7 @@ bind-mouse M-2		window-lower
 bind-mouse M-3		window-resize
 .Ed
 .Sh SEE ALSO
-.Xr cwm 1
+.Xr crowm 1
 .Sh HISTORY
 The
 .Nm

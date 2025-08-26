@@ -29,7 +29,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "calmwm.h"
+#include "crowm.h"
 
 void
 xu_ptr_get(Window win, int *x, int *y)

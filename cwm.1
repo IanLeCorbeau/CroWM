@@ -15,14 +15,14 @@
 .\" OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 .\"
 .Dd $Mdocdate$
-.Dt CWM 1
+.Dt CROWM 1
 .Os
 .Sh NAME
-.Nm cwm
+.Nm crowm
 .Nd a lightweight and efficient window manager for X11
 .Sh SYNOPSIS
 .\" For a program:  program [-abc] file ...
-.Nm cwm
+.Nm crowm
 .Op Fl nv
 .Op Fl c Ar file
 .Op Fl d Ar display
@@ -39,7 +39,7 @@ Specify an alternative configuration file.
 By default,
 .Nm
 loads
-.Pa ~/.cwmrc ,
+.Pa ~/.crowmrc ,
 if present.
 Any error messages from lines in the configuration file will be sent to
 .Em stderr ;
@@ -134,12 +134,12 @@ Toggle horizontal maximization of current window.
 Move window by a small amount.
 .It Ic MS-[hjkl]
 Move window by a large amount; see
-.Xr cwmrc 5 .
+.Xr crowmrc 5 .
 .It Ic CM-[hjkl]
 Resize window by a small amount.
 .It Ic CMS-[hjkl]
 Resize window by a large amount; see
-.Xr cwmrc 5 .
+.Xr crowmrc 5 .
 .It Ic M-question
 Spawn
 .Dq exec program
@@ -263,14 +263,14 @@ starts on this display unless the
 option is given.
 .El
 .Sh FILES
-.Bl -tag -width "~/.cwmrcXX" -compact
-.It Pa ~/.cwmrc
+.Bl -tag -width "~/.crowmrcXX" -compact
+.It Pa ~/.crowmrc
 Default
 .Nm
 configuration file.
 .El
 .Sh SEE ALSO
-.Xr cwmrc 5
+.Xr crowmrc 5
 .Sh HISTORY
 .Nm
 was originally inspired by evilwm, but was rewritten from scratch
