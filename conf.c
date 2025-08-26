@@ -86,6 +86,7 @@ static const struct {
 	{ FUNC_CC(window-delete, client_close, 0) },
 	{ FUNC_CC(window-htile, client_htile, 0) },
 	{ FUNC_CC(window-vtile, client_vtile, 0) },
+	{ FUNC_CC(window-monocle, client_monocle, 0) },
 	{ FUNC_CC(window-stick, client_toggle_sticky, 0) },
 	{ FUNC_CC(window-fullscreen, client_toggle_fullscreen, 0) },
 	{ FUNC_CC(window-maximize, client_toggle_maximize, 0) },

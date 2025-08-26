@@ -22,6 +22,8 @@ development.**
 * Monocle mode: when this mode is enabled, every window opens maximized
 by default (minus gaps/bar size).
 
+* Toggle monocle keybind: maximizes all mapped windows.
+
 * Manual tiling (htile, vtile) can be triggered regardless of the window's
 state (unless it is in full screen mode). This makes it possible to switch
 between layouts even if a window is maximized horizontally or vertically.
@@ -29,8 +31,6 @@ between layouts even if a window is maximized horizontally or vertically.
 ### Future features
 
 * Change the default keybindings to be vim-like.
-
-* Toggle monocle: maximizes all mapped windows.
 
 * When a window is closed, automatically focus the last (or first?) window
 in the queue (or the previously focused window).

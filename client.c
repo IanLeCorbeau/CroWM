@@ -1054,3 +1054,61 @@ client_vtile(struct client_ctx *cc)
 		client_resize(ci, 1);
 	}
 }
+
+void
+client_monocle(struct client_ctx *cc)
+{
+	struct client_ctx	*ci;
+	struct screen_ctx 	*sc = cc->sc;
+	struct geom 		 area;
+	int 			 n, x, y, w, h;
+
+	n = 0;
+	area = screen_area(sc,
+	    cc->geom.x + cc->geom.w / 2,
+	    cc->geom.y + cc->geom.h / 2, 1);
+
+	TAILQ_FOREACH(ci, &sc->clientq, entry) {
+		if (ci->gc != cc->gc)
+			continue;
+		if (ci->flags & CLIENT_HIDDEN ||
+		    ci->flags & CLIENT_IGNORE || (ci == cc) ||
+		    ci->geom.x < area.x ||
+		    ci->geom.x > (area.x + area.w) ||
+		    ci->geom.y < area.y ||
+		    ci->geom.y > (area.y + area.h))
+			continue;
+		n++;
+	}
+	if (n == 0)
+		return;
+
+	cc->geom.x = area.x;
+	cc->geom.y = area.y;
+	cc->geom.w = area.w - cc->bwidth*2;
+	cc->geom.h = area.h - cc->bwidth*2;
+	client_resize(cc, 1);
+	client_ptr_warp(cc);
+
+	x = area.x;
+	y = area.y;
+	h = area.h;
+	w = area.w;
+	TAILQ_FOREACH(ci, &sc->clientq, entry) {
+		if (ci->gc != cc->gc)
+			continue;
+		if (ci->flags & CLIENT_HIDDEN ||
+		    ci->flags & CLIENT_IGNORE || (ci == cc) ||
+		    ci->geom.x < area.x ||
+		    ci->geom.x > (area.x + area.w) ||
+		    ci->geom.y < area.y ||
+		    ci->geom.y > (area.y + area.h))
+			continue;
+		ci->bwidth = Conf.bwidth;
+		ci->geom.x = x;
+		ci->geom.y = y;
+		ci->geom.w = w - (ci->bwidth * 2);
+		ci->geom.h = h - (ci->bwidth * 2);
+		client_resize(ci, 1);
+	}
+}

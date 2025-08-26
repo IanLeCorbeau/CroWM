@@ -402,6 +402,12 @@ kbfunc_client_vtile(void *ctx, struct cargs *cargs)
 }
 
 void
+kbfunc_client_monocle(void *ctx, struct cargs *cargs)
+{
+	client_monocle(ctx);
+}
+
+void
 kbfunc_client_cycle(void *ctx, struct cargs *cargs)
 {
 	struct screen_ctx	*sc = ctx;
