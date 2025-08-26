@@ -194,6 +194,10 @@ The default is 50.
 Ignore, and do not warp to, windows with the name
 .Ar windowname
 when drawing borders and cycling through windows.
+.It Ic monocle Ic yes Ns \&| Ns Ic no
+Toggle monocle mode. The default behavior is to open windows
+under the mouse pointer. In Monocle mode, however, all windows
+open maximized, minus gap size.
 .It Ic moveamount Ar pixels
 Set a default size for the keyboard movement bindings,
 in pixels.
@@ -317,6 +321,8 @@ Stick current window to all groups (same as assigning to nogroup).
 Full-screen current window (gap + border removed).
 .It window-maximize
 Maximize current window (gap + border honored).
+.It window-monocle
+Maximize all mapped windows (gap + border honored).
 .It window-vmaximize
 Vertically maximize current window (gap + border honored).
 .It window-hmaximize
