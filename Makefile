@@ -1,12 +1,7 @@
 # Makefile for cwm
 # $Ragnarok$
 
-CC=		cc
-
-PROG=		cwm
-
-PREFIX?=	/usr
-X11BASE =	/usr
+include config.mk
 
 SRCS=		calmwm.c screen.c xmalloc.c client.c menu.c \
 		search.c util.c xutil.c conf.c xevents.c group.c \
@@ -16,15 +11,6 @@ OBJS=		calmwm.o screen.o xmalloc.o client.o menu.o \
 		search.o util.o xutil.o conf.o xevents.o group.o \
 		kbfunc.o strlcpy.o strlcat.o parse.o \
 		strtonum.o reallocarray.o
-		
-CPPFLAGS	+=	-I${X11BASE}/include -I${X11BASE}/include/freetype2
-
-CFLAGS		+=	-Wall -O2 -D_GNU_SOURCE
-
-LDFLAGS		+=	-L${X11BASE}/lib -lXft -lfreetype -lX11-xcb -lX11 -lxcb \
-			-lXau -lXdmcp -lfontconfig -lexpat -lfreetype -lz -lXrandr -lXext
-
-MANPREFIX?=	${PREFIX}/share/man
 
 all: ${PROG}
 
