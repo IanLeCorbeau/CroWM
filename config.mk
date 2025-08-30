@@ -12,7 +12,10 @@ CPPFLAGS	+= -I${X11BASE}/include -I${X11BASE}/include/freetype2
 
 CFLAGS		+= -Wall -O2 -D_GNU_SOURCE
 
-LDFLAGS		+= -L${X11BASE}/lib -lXft -lfreetype -lX11-xcb -lX11 -lxcb \
-		   -lXau -lXdmcp -lfontconfig -lexpat -lfreetype -lz -lXrandr -lXext
+LDFLAGS		+= -L${X11BASE}/lib -lXft -lfreetype -lX11 -lXau -lXdmcp \
+		   -lfontconfig -lexpat -lfreetype -lz -lXrandr -lXext
+
+# Change to whatever yacc implementation is installed.
+YACC		= /usr/bin/oyacc
 
 #CC		= cc
