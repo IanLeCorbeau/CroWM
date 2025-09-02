@@ -28,16 +28,16 @@ by default (minus gaps/bar size).
 state (unless it is in full screen mode). This makes it possible to switch
 between layouts even if a window is maximized horizontally or vertically.
 
+* When a window closes, the window that previously had focus gets focused
+automatically.
+
 ### Future features
 
 * Change the default keybindings to be vim-like.
 
-* When a window is closed, automatically focus the last (or first?) window
-in the queue (or the previously focused window).
-
 * Automatic tiling.
 
-* A possible 'rewrite' using XCB instead of xlib.
+* A possible rewrite using XCB instead of xlib.
 
 There may be more added over time.
 
