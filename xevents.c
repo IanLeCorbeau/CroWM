@@ -98,15 +98,19 @@ xev_handle_unmapnotify(XEvent *ee)
 {
 	XUnmapEvent		*e = &ee->xunmap;
 	struct client_ctx	*cc;
+	struct screen_ctx	*sc;
 
 	LOG_DEBUG3("window: 0x%lx", e->window);
 
 	if ((cc = client_find(e->window)) != NULL) {
+		sc = cc->sc;
 		if (e->send_event) {
 			xu_set_wm_state(cc->win, WithdrawnState);
 		} else {
-			if (!(cc->flags & CLIENT_HIDDEN))
+			if (!(cc->flags & CLIENT_HIDDEN)) {
 				client_remove(cc);
+				client_focus_prev(sc);
+			}
 		}
 	}
 }

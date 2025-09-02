@@ -437,6 +437,7 @@ void			 client_lower(struct client_ctx *);
 void			 client_monocle(struct client_ctx *);
 void			 client_move(struct client_ctx *);
 void			 client_mtf(struct client_ctx *);
+void			 client_focus_prev(void *)
 struct client_ctx	*client_next(struct client_ctx *);
 struct client_ctx	*client_prev(struct client_ctx *);
 void			 client_ptr_inbound(struct client_ctx *, int);

@@ -185,6 +185,21 @@ client_find(Window win)
 	return NULL;
 }
 
+void
+client_focus_prev(void *ctx)
+{
+	struct screen_ctx	*sc = ctx;
+	struct client_ctx	*newcc;
+
+	if (TAILQ_EMPTY(&sc->clientq))
+		return;
+
+	if ((newcc = TAILQ_FIRST(&sc->clientq)) != NULL)
+		client_ptr_warp(newcc);
+
+	/* Is there anything missing? Let's find out. */
+}
+
 struct client_ctx *
 client_next(struct client_ctx *cc)
 {
