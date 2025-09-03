@@ -6,13 +6,20 @@ VERSION		=
 PREFIX		= /usr
 MANPREFIX	= ${PREFIX}/share/man
 
-X11BASE		= /usr
+X11INC		= /usr/X11R6/include
+X11LIBS		= /usr/X11R6/lib
 
-CPPFLAGS	+= -I${X11BASE}/include -I${X11BASE}/include/freetype2
+# freetype
+FREETYPEINC	= /usr/include/freetype2
+# uncomment on OpenBSD
+#FREETYPEINC	= ${X11INC}/freetype2
+#MANPREFIX	= ${PREFIX}/man
+
+CPPFLAGS	+= -I${X11INC} -I${FREETYPEINC}
 
 CFLAGS		+= -Wall -O2 -D_GNU_SOURCE
 
-LDFLAGS		+= -L${X11BASE}/lib -lXft -lfreetype -lX11 -lXau -lXdmcp \
+LDFLAGS		+= -L${X11LIBS} -lXft -lX11 -lXau -lXdmcp \
 		   -lfontconfig -lexpat -lfreetype -lz -lXrandr -lXext
 
 # Change to whatever yacc implementation is installed.
