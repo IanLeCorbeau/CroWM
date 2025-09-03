@@ -1,7 +1,10 @@
 # Edit to fit your distro
 
 PROG		= crowm
-VERSION		= 
+VERSION		= 0.1
+
+# Used in the 'dist' target.
+PKG		= ${PROG}-${VERSION}
 
 PREFIX		= /usr
 MANPREFIX	= ${PREFIX}/share/man

@@ -1,2 +1,4 @@
 RCS/
 *.o
+crowm-*.*/
+*.tar.xz

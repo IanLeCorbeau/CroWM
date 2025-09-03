@@ -15,7 +15,8 @@ OBJS=		crowm.o screen.o xmalloc.o client.o menu.o \
 all: ${PROG}
 
 clean:
-	rm -f ${OBJS} ${PROG} parse.c
+	rm -f ${OBJS} ${PROG} parse.c ${PKG}.tgz
+	rm -rf ${PKG}/
 
 ${PROG}: ${OBJS}
 	${CC} ${OBJS} ${LDFLAGS} -o ${PROG}
@@ -28,5 +29,11 @@ install: ${PROG}
 	install -m 755 ${PROG} ${DESTDIR}${PREFIX}/bin
 	install -m 644 ${PROG}.1 ${DESTDIR}${MANPREFIX}/man1
 	install -m 644 ${PROG}rc.5 ${DESTDIR}${MANPREFIX}/man5
+
+dist: clean
+	mkdir ${PKG}
+	rsync -av --exclude='.git' --exclude='.gitignore' \
+		--exclude='${PKG}' ./ ./${PKG}/
+	tar cJvf ${PKG}.tar.xz ${PKG}
 
 .PRECIOUS: parse.c
