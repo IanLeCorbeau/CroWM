@@ -1,4 +1,6 @@
 RCS/
 *.o
 crowm-*.*/
-*.tar.xz
+crowm-*.*.tar.xz
+crowm-*.*.tar.xz.sig
+SHA256
