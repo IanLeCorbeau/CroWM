@@ -15,7 +15,7 @@ OBJS=		crowm.o screen.o xmalloc.o client.o menu.o \
 all: ${PROG}
 
 clean:
-	rm -f ${OBJS} ${PROG} parse.c ${PKG}.tgz
+	rm -f ${OBJS} ${PROG} parse.c ${PKG}.tar.xz
 	rm -rf ${PKG}/
 
 ${PROG}: ${OBJS}
