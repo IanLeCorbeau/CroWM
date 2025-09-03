@@ -31,9 +31,9 @@ between layouts even if a window is maximized horizontally or vertically.
 * When a window closes, the window that previously had focus gets focused
 automatically.
 
-### Future features
+* The default key bindings were changed to be more vim-inspired.
 
-* Change the default keybindings to be vim-like.
+### Future features
 
 * Automatic tiling.
 
